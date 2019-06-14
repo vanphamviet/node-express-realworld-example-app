@@ -166,7 +166,7 @@ router.put('/:article', auth.required, function(req, res, next) {
       }
 
       if(typeof req.body.article.tagList !== 'undefined'){
-        req.article.tagList = req.body.article.tagList
+        req.article.tagList = req.body.article.tagList;
       }
 
       req.article.save().then(function(article){
